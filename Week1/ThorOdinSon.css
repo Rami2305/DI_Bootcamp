@@ -1,0 +1,28 @@
+body {
+    background-image: url('https://github.com/devtlv/studentsGitHub/blob/master/Images%20cours%20%C3%A0%20h%C3%A9berger%20-%2006.03.2024/Week%201%20-%20Web%20development%20Basics/W1D1/168069577-2f570d08-61d3-49d8-b7dd-c4b9192aaf68.jpg?raw=true');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+ul {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    float: right;
+    list-style-type: none;
+}
+
+ul li {
+    color: white;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+section {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 20px;
+    color: white;
+    max-width: 80%; 
+}

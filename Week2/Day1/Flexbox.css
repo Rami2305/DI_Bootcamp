@@ -1,0 +1,26 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+.div1 {
+   padding: 4px;
+   margin: 4px;
+   flex: 1 5 100px;
+  background-color: red;
+ 
+}
+.div2 {
+    padding: 4px;
+    margin: 100px;
+    border: 1px solid red;
+    background-color: #ffd6cc;
+    align-self: center; /* Centra verticalmente */
+}
+.div3 {
+    padding: 4px;
+    margin: 4px;
+    flex: 1 5 100px;
+   background-color: red;
+}

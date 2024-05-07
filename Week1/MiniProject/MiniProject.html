@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="left">
+            <i class="fas fa-shopping-cart"></i> <!-- Icono de carrito de compras -->
+        </div>
+        <div class="right">
+            <a href="products.html">Products</a>
+            <!-- Agrega aquí los enlaces de signup y login si decides hacer el bonus -->
+        </div>
+    </nav>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> | Developed by [Tu Nombre]</p>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

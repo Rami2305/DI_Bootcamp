@@ -1,0 +1,32 @@
+section {
+	border: 1.5px solid black;
+	display: grid;
+	grid-template-areas:
+		"header header"
+		"content sidebar"
+		"content sidebar"
+		"content sidebar"
+		"footer footer";
+	grid-template-rows: 40px 1fr 1fr 1fr 40px;
+	grid-template-columns: 1fr 200px;
+	gap: 10px;
+}
+
+.card {
+	overflow: hidden;
+	padding: 5px 0px 0px 5px;
+	background-color: rgb(184, 128, 240);
+	border: 1px solid black;
+}
+
+#header {
+	grid-area: header;
+	background-color: rgb(0, 125, 139);
+	margin: 0px;
+}
+
+#footer {
+	grid-area: footer;
+	background-color: rgb(238, 214, 144);
+	/* 	margin: 10px; */
+}

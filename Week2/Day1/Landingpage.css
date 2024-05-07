@@ -1,0 +1,16 @@
+.header {
+	grid-area: header;
+	text-align: center;
+}
+.up {
+	grid-area: top;
+	text-align: center;
+}
+.grid-conteiner {
+	display: grid;
+	grid-template-areas:
+	'header header header'
+	'up up up';
+	grid-template-rows: 1fr 1fr 3.6fr;
+	grid-template-columns: auto auto auto;
+}
