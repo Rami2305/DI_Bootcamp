@@ -1,0 +1,52 @@
+.columna1 {
+    background-color: #f8f9fa;
+    padding: 20px;
+    display: inline-block;
+}
+
+.columna1 h3 {
+    color: #343a40;
+}
+
+.columna1 ul {
+    list-style-type: none;
+}
+
+#buscador {
+    margin-top: 20px;
+}
+
+/* Estilos para el formulario de búsqueda */
+#buscador input[type="search"],
+#buscador button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+}
+
+#buscador button[type="submit"] {
+    margin-top: 10px;
+}
+
+/* Estilos para la columna derecha */
+.col-lg-9 {
+    padding: 20px;
+}
+
+#alerta {
+    background-color: #fc5656;
+    color: #8c0101;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la tabla de enfermedades */
+
+/* Estilos para las filas impares */
+.table tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Cambiar el color de fondo de las filas impares */
+}
+
+/* Estilos para las imágenes */
+img {
+    margin-bottom: 20px;
+}

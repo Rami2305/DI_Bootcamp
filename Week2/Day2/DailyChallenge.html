@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="DailyChallenge.css"
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="columna1" class="col-lg-3 col-md-4 col-sm-12">
+                <h3>Some Favorites</h3>
+                <ul>
+                    <li>Celery Root</li>
+                    <li>Spaghetti Squash</li>
+                    <li>Killer Mushrooms</li>
+                </ul>
+                <form id="buscador" class="my-4">
+                    <div class="form-group">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                    </div>
+                    <button id="boton" class="btn btn-outline-success mt-2" type="submit">Search</button>
+                </form>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-12">
+                <div id="alerta" class="alert alert-primary" role="alert">
+                    <p>¡Ups! ¿Has tomado tu dosis diaria de verduras hoy?</p>
+                </div>
+                <h3>Wild & Wacky Vegetables</h3>
+                <blockquote>
+                    <p>"La remolacha es la más intensa de las verduras. El rábano, es más febril, pero el fuego del rábano es un fuego frío, el fuego del descontento no de la pasión. Los tomates son lo suficientemente vigorosos, sin embargo, a través de ellos corre un trasfondo de frivolidad. Las remolachas son mortalmente serias."</p>
+                    <p>- Tom Robbins</p>                  
+                </blockquote>
+                <h4>Some diseases</h4>
+                <table id="tabla" class="table">
+                    <thead>
+                        <tr>
+                            <th>Veggie</th>
+                            <th>Disease</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Beets</td>
+                            <td>Beeturia </td>
+                        </tr>
+                        <tr>
+                            <td>Carrots</td>
+                            <td>Carotenosis</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <span class="border border-4">
+                    <img id="foto1" src="data:image/jpeg;base64,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" width="100px" height="100px">
+                </span>
+                <span class="border border-4">
+                    <img id="foto1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWYPH__Cn5FyqbjVHozgXu-VxiMCRxTbiSqQ&s" width="100px" height="100px">
+                </span>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi in at cupiditate architecto. Vero assumenda culpa illum facere doloremque, odio doloribus, quos ratione quae optio, dolorem similique alias quia eaque.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
