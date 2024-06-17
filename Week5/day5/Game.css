@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box
+} /*si ponemos un border en el elemento, el border va a estar dentro*/
+body{ 
+    margin: 0;
+    padding: 0;
+} /*sacamos el formato que habia antes*/
+#container {
+    border: 1px solid red;
+    height: 100vh;
+    display: grid;  
+    grid-template-columns: 1fr 4fr;
+    background-color: darkgrey;
+    padding: 0.5rem;
+} /*establecemos el formato de cuadricula y definimos columnas y filas+*/
+
+#container>*{
+    border: 1px solid red;
+}/*todos los hijos de conteiner va a tomar este border*/
+
+#sidebar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    padding: 0.5rem;
+    gap: 0.5rem;
+    /*esta formula repeat, es para cuando
+    hay grandes cantidades de columnas y filas y solo indicas primero el numero
+    que queres, y dsp el comando*/
+}
+#sidebar > * {
+    border: 1px solid blue;
+}/*todos los hijos de conteiner va a tomar este border*/
+
+#sidebar .clear { /*lo escribimos asi para darle las claridad al código y que sea facil de leer
+    el -1 toma el maximo */
+    grid-column: 1 / -1;
+}
+#sidebar .clear button {
+    height: 100%;
+    width: 100%;
+}
