@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h2>Get Method</h2>
+    <form method="GET" action="https://jsonplaceholder.org/users">
+      <input name="id" placeholder="id" />
+      <input name="email" placeholder="email" />
+      <button>Send Get Request</button>
+    </form>
+    <h2>Get Method</h2>
+    <form method="GET" action="https://jsonplaceholder.typicode.com/posts">
+      <input name="userId" placeholder="user id" />
+      <input name="id" placeholder="post id" />
+      <button>Get User's Posts</button>
+    </form>
+    <!-- https://www.google.com/search?q=developers+institute -->
+    <form method="GET" action="https://www.google.com/search">
+      <input name="q" placeholder="search" />
+      <button>Send</button>
+    </form>
+
+    <h2>Login Form</h2>
+    <form method="POST">
+      <input name="email" placeholder="email" />
+      <input name="password" placeholder="password" />
+      <input type="submit" value="Login" />
+    </form>
+
+    <!-- https://jsonplaceholder.typicode.com/posts -->
+    <!-- userId, title, body -->
+    <!-- post - 3 inputs, 1 submit  -->
+    <form method="POST" action="https://jsonplaceholder.typicode.com/posts">
+      <input name="userId" />
+      <input name="title" />
+      <input name="body" />
+      <input type="submit" value="add new post" />
+    </form>
+
+
+  </body>
+</html>
+
+<!-- 
+Add a user
+1. A form with post method
+2. Action https://users-18kl.onrender.com/user
+3. Input name -> name
+3. input name -> email
+4. input name -> username
+5. Submit
+ -->
