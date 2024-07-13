@@ -14,9 +14,8 @@ function sortWords(words) {
         if(words.length > 4) {
             return (words.sort())
         } else {
-            reject('Error> Arra is less or equal to 4')
+            reject('Error > Array is less or equal to 4')
         }
     })
 }
 
-makeall
