@@ -1,5 +1,5 @@
 const quotes = [
-    { id: 0, author: "Zeus Almighty", quote: "Release the Kraken" },
+    { id: 0, author: "Zeus Allmighty", quote: "Release the Kraken" },
     { id: 1, author: "Gandalf the Gray", quote: "You shall not pass" },
     { id: 2, author: "Rafiki The Monkey", quote: "Oh yes... The past may hurt, but the way I see it you can either run from it or learn." },
     { id: 3, author: "Gandalf the Gray", quote: "Only you can decide what to do with the time you have been given" },
@@ -7,7 +7,7 @@ const quotes = [
 ];
 
 // Variable para seleccionar el botón "generate quote"
-const btnQuotes = document.getElementById('generate-quote');
+const btnQuotes = document.getElementById('generateQuoteBtn');
 // console.log(btnQuotes);
 
 // Variable para seleccionar el elemento donde se mostrará la cita
@@ -22,6 +22,10 @@ const authorDisplay = document.getElementById('author-display');
 const addNewQuotes = document.getElementById('addquotesbutton');
 // console.log(addNewQuotes);
 
+
+document.getElementById('charCountWithSpaces').addEventListener('click', () => countCharacters(true));
+document.getElementById('charCountWithoutSpaces').addEventListener('click', () => countCharacters(false));
+
 // Función para mostrar el contenido del array "quotes" al hacer clic en el botón "generate quote"
 btnQuotes.addEventListener('click', () => {
     let random = Math.floor(Math.random() * quotes.length);
@@ -32,17 +36,34 @@ btnQuotes.addEventListener('click', () => {
 
 // Función para agregar nuevas citas al array "quotes" al hacer clic en el botón "add quotes"
 addNewQuotes.addEventListener('click', () => {
-    const authorInput = document.getElementById('author').value;
+    const authorInput = document.getElementById('newAuthor').value;
     // console.log(authorInput);
-    const quoteInput = document.getElementById('quote').value;
+    const quoteInput = document.getElementById('newQuote').value;
     // console.log(quoteInput);
 
     if (authorInput && quoteInput) {
         quotes.push({ id: quotes.length, author: authorInput, quote: quoteInput });
         // Limpiar los campos del formulario
        
-        document.getElementById('author').value = '';
-        document.getElementById('quote').value = '';
+        document.getElementById('newAuthor').value = '';
+        document.getElementById('newQuote').value = '';
         console.log("Quotes array after adding new quote:", quotes);
     }
 });
+
+function countCharacters(withSpaces) {
+    const currentQuote = quotes[random];
+    if (!currentQuote) {
+        alert('No quote to count characters from.');
+        return;
+    }
+
+    let count;
+    if (withSpaces) {
+        count = currentQuote.quote.length;
+    } else {
+        count = currentQuote.quote.replace(/\s/g, '').length;
+    }
+
+    alert(`Character count: ${count}`);
+}
