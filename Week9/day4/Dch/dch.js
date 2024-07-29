@@ -3,21 +3,22 @@
 // When you click the Send button, retrieve the data from the inputs, and append it on the DOM as a JSON string.
 // The output should be:
 document.getElementById('form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    // Retrieve the input values
+    event.preventDefault();
+// Esto porque se reinicia cada vez que yo clickeo send, prestar atencion!!
+    
     const name = document.getElementById('name').value;
     const lastname = document.getElementById('lastname').value;
+    //  llamamos a los datos que hay dentro del formulario
 
-    // Create a JSON object with the input values
+//    creamos el object
     const data = {
         name: name,
         lastname: lastname
     };
 
-    // Convert the JSON object to a JSON string
+    // lo transformo a json
     const jdata = JSON.stringify(data);
 
-    // Append the JSON string to the DOM
+//    lo vinculo al archivo html creando un div
     document.getElementById('output').textContent = jdata;
 });
