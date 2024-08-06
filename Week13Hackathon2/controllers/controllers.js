@@ -1,28 +1,36 @@
 const taskModel = require('../models/models.js');
 
 module.exports = {
-    getAllTasks: (req, res) => {
-        const task = taskModel.readTaskJson();
-        res.json(task);
+    getAllTasks: async (req, res) => {
+        try {
+            const tasks = await taskModel.getAllTasks();
+            res.json(tasks);
+        } catch (error) {
+            res.status(500).send("Error fetching tasks");
+        }
     },
-    saveTask: (req, res) => {
-        const task = taskModel.readTaskJson();
-        task.push(req.body);
-        taskModel.writeTaskJson(task);
-        res.sendStatus(201);
+    saveTask: async (req, res) => {
+        try {
+            await taskModel.createTask(req.body);
+            res.sendStatus(201);
+        } catch (error) {
+            res.status(500).send("Error creating task");
+        }
     },
-    updateTask: (req, res) => {
-        const task = taskModel.readTaskJson();
-        const taskIndex = task.findIndex((task) => task.id === parseInt(req.params.id));
-        task[taskIndex] = req.body;
-        taskModel.writeTaskJson(task);
-        res.sendStatus(200);
+    updateTask: async (req, res) => {
+        try {
+            await taskModel.updateTask(req.params.id, req.body);
+            res.sendStatus(200);
+        } catch (error) {
+            res.status(500).send("Error updating task");
+        }
     },
-    deleteTask: (req, res) => {
-        const task = taskModel.readTaskJson();
-        const taskIndex = task.findIndex((task) => task.id === parseInt(req.params.id));
-        task.splice(taskIndex, 1);
-        taskModel.writeTaskJson(task);
-        res.sendStatus(200);
+    deleteTask: async (req, res) => {
+        try {
+            await taskModel.deleteTask(req.params.id);
+            res.sendStatus(200);
+        } catch (error) {
+            res.status(500).send("Error deleting task");
+        }
     }
 };

@@ -6,9 +6,6 @@ const router = express.Router();
 
 router.get("/", tasksController.getAllTasks);
 
-//read one task
-// router.get("/:id", tasksController.getTask);
-
 //create
 router.post("/", tasksController.saveTask);
 

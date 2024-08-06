@@ -1,22 +1,39 @@
-const fs = require('fs');
-
-let task = [];
+const db = require('../config/config.js'); 
 
 module.exports = {
-    readTaskJson: () => {
+    getAllTasks: async () => {
         try {
-            const taskJson = fs.readFileSync('task.json','utf-8');
-            task = JSON.parse(taskJson) || [];
-            return task
+            const tasks = await db.select('*').from('tasks');
+            return tasks;
         } catch (error) {
-            console.log("Error reading JSON file:", error);
-            return [];
+            console.error("Error fetching tasks:", error);
+            throw error;
         }
     },
-    writeTaskJson: (taskJson) => {
-        fs.writeFile('task.json', JSON.stringify(taskJson, null, 2), 'utf-8', (err) => {
-            if (err) return console.log("Error reading JSON file:", err);
-            console.log('task saved');
+    createTask: async (task) => {
+        try {
+            const { name, email, age, feeling, goal, exerciseFrequency, activityType } = task;
+            await db('tasks').insert({ name, email, age, feeling, goal, exercise_frequency: exerciseFrequency, activity_type: activityType });
+        } catch (error) {
+            console.error("Error creating task:", error);
+            throw error;
         }
-    )}
-}
+    },
+    updateTask: async (id, task) => {
+        try {
+            const { name, email, age, feeling, goal, exerciseFrequency, activityType } = task;
+            await db('tasks').where({ id }).update({ name, email, age, feeling, goal, exercise_frequency: exerciseFrequency, activity_type: activityType });
+        } catch (error) {
+            console.error("Error updating task:", error);
+            throw error;
+        }
+    },
+    deleteTask: async (id) => {
+        try {
+            await db('tasks').where({ id }).del();
+        } catch (error) {
+            console.error("Error deleting task:", error);
+            throw error;
+        }
+    }
+};

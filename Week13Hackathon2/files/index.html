@@ -3,19 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Reduce Anxiety and Stress</title>
 </head>
 <body>
-    <h1>Welcome to our Portal</h1>
-    <p>Here you will find how we are....</p>
-    <form action="submit" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email" required>
-      <label for="age">Age:</label>
-      <input type="number" id="age" name="age" required>
-      <button type="submit">Send</button>
-    </form>
+  <header>
+      <nav>
+          <ul>
+              <li><a href="#about">About us</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#form">Sign Up</a></li>
+          </ul>
+      </nav>
+  </header>
+  
+  <main>
+      <section id="hero">
+          <h1>Welcome to La Calma</h1>
+          <p>Your journey towards reducing anxiety and stress begins here.</p>
+      </section>
+      <section id="about">
+        <h2>How we are</h2>
+        <p>We are a team dedicated to providing effective solutions for managing anxiety and stress. Our mission is to offer personalized plans and support to help you lead a more balanced life.</p>
+        <!-- <img src="team.jpg" alt="Our Team" class="team-image"> -->
+        </section>
+     
+      <section id="form">
+          <h2>Sign Up</h2>
+          <form class="form" action="submit" method="POST">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+              
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" required>
+              
+              <label for="age">Age:</label>
+              <input type="number" id="age" name="age" required>
+              
+              <button type="submit">Send</button>
+          </form>
+      </section>
+      
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you have any questions or need support, feel free to reach out to us on our channels!</p>
+    </section>
+    
+  </main>
+  
+  <footer>
+      <p>&copy; 2024 Reduce Anxiety and Stress. All rights reserved.</p>
+  </footer>
 </body>
 </html>

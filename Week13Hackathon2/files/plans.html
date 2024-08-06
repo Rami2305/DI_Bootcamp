@@ -3,24 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services</title>
+    <link rel="stylesheet" href="plans.css">
+    <title>Our Plans</title>
 </head>
 <body>
     <header>
-        <h1>Choose what you need</h1>
+        <h1>Our Plans</h1>
     </header>
+    
     <main>
-        <section class="plan">
-            <h2>asdasd</h2>
-            <p>Descripción del Plan de Acción 1.</p>
-        </section>
-        <section class="plan">
-            <h2>Plan de Acción 2</h2>
-            <p>Descripción del Plan de Acción 2.</p>
-        </section>
-        <footer>
-            <a href="/">Back to main page</a>
-        </footer>
-    </main>
+        <form id="quiz-form">
+            <h2>Questionnaire</h2>
+            
+            <div>
+                <label>1. How are you feeling right now?</label><br>
+                <input type="radio" name="feeling" value="Sad" required> Sad<br>
+                <input type="radio" name="feeling" value="Anxious"> Anxious<br>
+                <input type="radio" name="feeling" value="Angry"> Angry<br>
+                <input type="radio" name="feeling" value="Happy"> Happy
+            </div>
+        
+            <div>
+                <label>2. What would you like to achieve with this plan?</label><br>
+                <input type="radio" name="goal" value="Relaxation" required> Relaxation<br>
+                <input type="radio" name="goal" value="Energy"> Energy<br>
+                <input type="radio" name="goal" value="Focus"> Focus<br>
+                <input type="radio" name="goal" value="Emotional Balance"> Emotional Balance
+            </div>
+        
+            <div>
+                <label>3. How often do you exercise?</label><br>
+                <input type="radio" name="exerciseFrequency" value="Never" required> Never<br>
+                <input type="radio" name="exerciseFrequency" value="Occasionally"> Occasionally<br>
+                <input type="radio" name="exerciseFrequency" value="Regularly"> Regularly<br>
+                <input type="radio" name="exerciseFrequency" value="Daily"> Daily
+            </div>
+        
+            <div>
+                <label>4. What type of activities do you prefer?</label><br>
+                <input type="radio" name="activityType" value="Gentle Exercises" required> Gentle Exercises (yoga, stretching)<br>
+                <input type="radio" name="activityType" value="Intense Exercises"> Intense Exercises (HIIT, strength training)<br>
+                <input type="radio" name="activityType" value="Mental Activities"> Mental Activities (meditation, mindfulness)<br>
+                <input type="radio" name="activityType" value="Recreational Activities"> Recreational Activities (walking, sports)
+            </div>
+        
+            <button type="submit">Submit</button>
+        </form>
+                
+        <div id="plan-result"></div>
+    
+    <footer>
+        <p>&copy; 2024 Reduce Anxiety and Stress. All rights reserved.</p>
+    </footer>
+    <script src="plans.js"></script>
 </body>
 </html>
