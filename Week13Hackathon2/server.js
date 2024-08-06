@@ -8,24 +8,6 @@ server.use(express.static('files'));
 server.use(express.urlencoded({ extended: true }));
 server.use(express.json());
 
-// Ruta para el portal principal
-// server.get('/', (req, res) => {
-//   res.send('¡asdasdasd');
-// });
-
-// server.post('/submit', async (req, res) => {
-//     const { name, email, age } = req.body; // Extraer datos del formulario
-
-//     try {
-//         // Crear una nueva tarea en la base de datos
-//         await taskModel.createTask({ name, email, age });
-//         // Redirigir a la página de planes de acción
-//         res.redirect('plans.html');
-//     } catch (error) {
-//         console.error("Error when try to create account:", error);
-//         res.status(500).send("There was an error");
-//     }
-// });
 server.post('/submit', async (req, res) => {
     const { name, email, age, feeling, goal, exerciseFrequency, activityType } = req.body;
 
