@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-// Función para leer el contenido de un archivo
+// Fx to read the content of a file
 function readFile(filePath, callback) {
     fs.readFile(filePath, 'utf-8', (err, data) => {
         if (err) {
@@ -11,7 +11,7 @@ function readFile(filePath, callback) {
     });
 }
 
-// Función para escribir contenido en un archivo
+// Fx to write content on a file
 function writeFile(filePath, content, callback) {
     fs.writeFile(filePath, content, 'utf-8', (err) => {
         if (err) {
@@ -24,5 +24,5 @@ function writeFile(filePath, content, callback) {
 
 module.exports = { readFile, writeFile };
 
-// Se definen lo mas generica posibles para poder usar este archivo como base,
-// y de esta manera podemos reutilizar para demas cosas en diferentes momentos
+//we define a fx that is generic as possible to be able to use it as base
+// and then we can reuse it to differents moments
