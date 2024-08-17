@@ -1,0 +1,33 @@
+.container {
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white; /* Fondo blanco para el contenedor */
+    text-align: center;
+    transition: background-color 1s; /* Transición suave para el color de fondo */
+}
+  
+  /* Estilo para los elementos internos */
+.quote-box {
+    background-color: white; /* Fondo blanco para el quote, author y botón */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+  
+  /* Estilo para el botón */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+  /* Colores de texto y botón que cambiarán */
+.text-color {
+    color: white; /* Color blanco para el texto */
+}
+

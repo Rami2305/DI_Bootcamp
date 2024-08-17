@@ -12,10 +12,6 @@ app.unsubscribe(express.urlencoded({extended:true}))
 app.use(express.json())
 
 
-const PORT = process.env.PORT || 3001;
 
-app.listen(PORT, () => {
-    console.log(`run on ${PORT}`)
-})
 
 // app.use('/products', products_router);
