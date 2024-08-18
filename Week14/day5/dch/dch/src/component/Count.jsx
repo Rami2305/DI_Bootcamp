@@ -14,7 +14,7 @@ const Count = () => {
     return (
         <>
             <h2>Count</h2>
-            <form onClick={()=> add()}> + </button>
+            <button onClick={()=> add()}> + </button>
             {count}
             <button onClick={()=> minus()}> - </button>
         </>

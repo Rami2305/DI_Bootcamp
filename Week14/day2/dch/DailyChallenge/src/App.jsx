@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-      <h2>Vote</h2>
+      <h2>Vote Your Language!</h2>
       {languages.map((language,index) => {
         return (
           <div key={language.name}>
