@@ -14,10 +14,10 @@ const tasksSlice = createSlice({
                 id:nanoid(), 
                 task:action.payload, 
                 active: true, datetime: 
-                Date.now})
+                Date.now()})
         },
         remove: (state, action) => {
-            state.tasks = state.tasks.filter(task => task.i !== action.payload)
+            state.tasks = state.tasks.filter(task => task.id !== action.payload)
         },
         clear: (state) => {
             state.tasks = []
@@ -34,4 +34,4 @@ const tasksSlice = createSlice({
 })
 
 export const { add, remove, clear, active } = tasksSlice.actions;
-export default tasksSlice.reducers
+export default tasksSlice.reducer

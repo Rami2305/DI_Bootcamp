@@ -9,7 +9,7 @@ const TaskInput = (props) => {
     const addTask = () => {
         const value = inputRef.current?.value.trim();
         if (value === '') return;
-        dispatch(add());
+        dispatch(add(value));
         inputRef.current.value = '';
         };
 
