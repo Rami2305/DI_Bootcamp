@@ -23,6 +23,5 @@ export const useFilterAuthor = () => {
     return useCallback((id) =>{
     dispatch(filterAuthor(id))},
     [dispatch]
-)
-    
+    )
 }

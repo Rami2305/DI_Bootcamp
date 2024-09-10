@@ -23,7 +23,11 @@ const postsSlice = createSlice({
       if(post) {
         post.reactions[name]++;
       }
-    }
+    },
+    filterAuthor: (state, action) => {
+      state.author = action.payload;
+    },
+    
   },
   extraReducers(builder) {
     builder
@@ -51,10 +55,10 @@ const postsSlice = createSlice({
 
 })
 
-export const posts = (state) => state.postsReducer.posts
-export const status = (state) => state.postsReducer.status
-export const state = (state) => state.postsReducer
-export const author = (state) => state.postReducer.author
+export const posts = (state) => state.postsReducer.posts;
+export const status = (state) => state.postsReducer.status;
+export const state = (state) => state.postsReducer;
+export const author = (state) => state.postsReducer.author;
 
-export const { addreaction } = postsSlice.actions
-export default postsSlice.reducer
+export const { addreaction, filterAuthor } = postsSlice.actions;
+export default postsSlice.reducer;
