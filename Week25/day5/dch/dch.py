@@ -11,17 +11,17 @@
 # "grapes" ➞ { "g": [0], "r": [1], "a": [2], "p": [3]}
 
 
-user_word = input('Give me a word')
+# user_word = input('Give me a word')
 
-place_word = {}
+# place_word = {}
 
-for index, letter in enumerate(user_word):
-    if letter in place_word:
-        place_word[letter].append(index)
-    else:
-        place_word[letter] = [index]
+# for index, letter in enumerate(user_word):
+#     if letter in place_word:
+#         place_word[letter].append(index)
+#     else:
+#         place_word[letter] = [index]
 
-print(place_word)
+# print(place_word)
 #enumerate give to values: the position(i) and te value(letter)
 #if letter in the dictionary will be addedin a new position if not,
 #will create a new position
@@ -30,8 +30,33 @@ print(place_word)
 #if not, wil create a new position.
 
 # Challenge 2
-# Create a program that prints a list of the items you can afford in the store with the money you have in your wallet.
+# Create a program that prints a list of the items you can afford in the store with the money 
+# you have in your wallet.
 # Sort the list in alphabetical order.
 # Return “Nothing” if you can’t afford anything from the store.
-# Hint : make sure to convert the amount from dollars to numbers. Create a program that deletes the $ sign, and the comma (for thousands)
+# Hint : make sure to convert the amount from dollars to numbers. 
+# Create a program that deletes the $ sign, and the comma (for thousands)
 
+def get_items(store_items, wallet):
+
+    items=[]
+
+    for item, price in store_items.items():
+        clean_price = float(price.replace('$','').replace(',',''))
+        if clean_price <= wallet:
+            items.append(item)
+
+    if not items:
+        return 'you can buy nothing'
+    
+    return sorted(items)
+
+store_items = {
+    "Chocolate": "$4.50",
+    "Pizza": "$8.99",
+    "Laptop": "$999.99",
+    "Book": "$15.99",
+    "Apple": "$0.99"
+}
+
+print(get_items(store_items, 300))
