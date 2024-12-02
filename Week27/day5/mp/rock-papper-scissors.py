@@ -26,15 +26,15 @@ def main():
     while True:
        choice = get_user_menu_choice()
        
-       if choice == '1':  # Play game
+       if choice == '1': 
            game = Game()
            result = game.play()
            results[result] += 1
            
-       elif choice == '2':  # Show scores
+       elif choice == '2':  
            print_results(results)
            
-       elif choice == '3':  # Quit
+       elif choice == '3':  
            print_results(results)
            break
 
